@@ -1,5 +1,5 @@
 ActiveAdmin.register Student do
-  permit_params :first_name, :father_last_name, :mother_last_name, :tag_student, :institutional_email, :personal_email, :reference_name, :cell_phone, :level_englsih
+  permit_params :first_name, :father_last_name, :mother_last_name, :tag_student, :institutional_email, :personal_email, :reference_name, :cell_phone, :level_english
   index do
     selectable_column
     id_column
@@ -8,10 +8,8 @@ ActiveAdmin.register Student do
     column :mother_last_name
     column :tag_student
     column :institutional_email
-    column :personal_email
-    column :reference_name
     column :cell_phone
-    column :level_englsih
+    column :level_english
     actions
   end
 
@@ -25,7 +23,7 @@ ActiveAdmin.register Student do
       f.input :personal_email
       f.input :reference_name
       f.input :cell_phone
-      f.input :level_englsih
+      f.input :level_english
     end
     f.actions
   end
@@ -40,17 +38,14 @@ ActiveAdmin.register Student do
       row :personal_email
       row :reference_name
       row :cell_phone
-      row :level_englsih
+      row :level_english
     end
   end
 
-  filter :first_name
-  filter :father_last_name
-  filter :mother_last_name
-  filter :tag_student
-  filter :institutional_email
-  filter :personal_email
-  filter :reference_name
-  filter :cell_phone
-  filter :level_englsih
+  filter :first_name_cont, label: "Nombre"
+  filter :father_last_name_cont, label: "Apellido Paterno"
+  filter :mother_last_name_cont, label: "Apellido Materno"
+  filter :tag_student_cont, label: "Matrícula"
+  filter :cell_phone_cont, label: "Número Teléfonico"
+  filter :level_english_cont, label: "Nivel de Íngles"
 end
