@@ -9,7 +9,7 @@ class CreateStudents < ActiveRecord::Migration
       t.string :personal_email
       t.string :reference_name
       t.integer :cell_phone, limit: 8
-      t.string :level_englsih
+      t.string :level_english
       t.timestamps null: false
     end
   end
